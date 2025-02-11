@@ -26,4 +26,4 @@ public class MainActivity extends AppCompatActivity {
         //defina conteudo de exibixao com obejeto
         setContentView(gameView);
     }
-}
+}//46:00
