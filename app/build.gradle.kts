@@ -1,43 +1,43 @@
 plugins {
-    alias(libs.plugins.android.application)
+    alias(libs.plugins.android.application) // Plugin para aplicações Android
 }
 
 android {
-    namespace = "com.example.brickbreaker2"
-    compileSdk = 34
+    namespace = "com.example.brickbreaker2" // Namespace do aplicativo
+    compileSdk = 34 // Versão do SDK de compilação
 
     defaultConfig {
-        applicationId = "com.example.brickbreaker2"
-        minSdk = 24
-        targetSdk = 34
-        versionCode = 1
-        versionName = "1.0"
+        applicationId = "com.example.brickbreaker2" // ID do aplicativo
+        minSdk = 24 // Versão mínima do SDK suportada
+        targetSdk = 34 // Versão do SDK alvo
+        versionCode = 1 // Código da versão
+        versionName = "1.0" // Nome da versão
 
-        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner" // Runner para testes
     }
 
     buildTypes {
         release {
-            isMinifyEnabled = false
+            isMinifyEnabled = false // Não habilitar minificação para o release
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
-                "proguard-rules.pro"
+                "proguard-rules.pro" // Arquivo de regras do ProGuard
             )
         }
     }
+
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
+        sourceCompatibility = JavaVersion.VERSION_1_8 // Compatibilidade de versão do Java
         targetCompatibility = JavaVersion.VERSION_1_8
     }
 }
 
 dependencies {
-
-    implementation(libs.appcompat)
-    implementation(libs.material)
-    implementation(libs.activity)
-    implementation(libs.constraintlayout)
-    testImplementation(libs.junit)
-    androidTestImplementation(libs.ext.junit)
-    androidTestImplementation(libs.espresso.core)
+    implementation(libs.appcompat) // Biblioteca de compatibilidade
+    implementation(libs.material) // Biblioteca Material Components
+    implementation(libs.activity) // Biblioteca de atividades
+    implementation(libs.constraintlayout) // Biblioteca de layout de restrição
+    testImplementation(libs.junit) // Biblioteca para testes unitários
+    androidTestImplementation(libs.ext.junit) // Biblioteca para testes instrumentados
+    androidTestImplementation(libs.espresso.core) // Biblioteca para testes de UI
 }

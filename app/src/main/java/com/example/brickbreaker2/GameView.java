@@ -117,7 +117,7 @@ public class GameView extends View {
             life--;
             if (life == 0){
                 gameOver = true;
-                //launchGameOver();
+                launchGameOver();
             }
             if (((ballX + ball.getWidth()) >= paddleX)
                 && (ballX <= paddleX + paddle.getWidth())
@@ -158,7 +158,7 @@ public class GameView extends View {
                         points += 10;
                         brokenBricks++;
                         if (brokenBricks == 24){
-                            //launchGameOver();
+                            launchGameOver();
                         }
                     }
                 }
