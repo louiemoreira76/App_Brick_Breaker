@@ -15,9 +15,10 @@ import android.view.MotionEvent;
 import android.view.View;
 
 import java.util.Random;
-import java.util.logging.Handler;
+import android.os.Handler;
 
 public class GameView extends View {
+
     Context context;
     float ballX, ballY;
     Velocity velocity = new Velocity(25,32);
@@ -95,7 +96,7 @@ public class GameView extends View {
     @Override
     protected void onDraw(Canvas canvas){
         super.onDraw(canvas);
-        cavas.drawColor(Color.BLACK);
+        canvas.drawColor(Color.BLACK);
         ballX += velocity.getX();
         ballY += velocity.getY();
         //se
